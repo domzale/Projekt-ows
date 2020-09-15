@@ -1,0 +1,107 @@
+<html>
+
+<head>
+	<title>OWS projekt</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384- 
+ B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+					<li><a href="#"><i class="fa fa-mobile"></i>Phone</a>
+						<div class="sub-menu-1">
+							<ul>
+								<li><a href="#">Samsung</a></li>
+								<li><a href="#">Iphone</a></li>
+								<li><a href="#">Huawei</a></li>
+							</ul>
+						</div>					
+					</li>
+					<li><a href="#"><i class="fa fa-cogs"></i>Accessories</a>
+						<div class="sub-menu-1">
+							<ul>
+								<li><a href="#">Mobile headphones</a></li>
+								<li><a href="#">Memory cards</a></li>
+								<li><a href="#">Selfie stick</a></li>
+								<li><a href="#">Charger</a></li>
+							</ul>
+						</div>	
+					
+					</li>
+					<li><a href="#"><i class="fa fa-cart-plus"</i>Cart</a>
+					</li>
+			</div>
+		</nav>
+
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/mobile.png" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					<img src="images/camera.png">
+					<div>
+						<h1>Camera</h1>
+						<p>12MP, Wide Angle Lens</p>
+					</div>
+				</div>
+				<div class="feature two">
+					<img src="images/procesor.jpg">
+					<div>
+						<h1>Procesor</h1>
+						<p>Snapdragon Octa-core 11nm</p>
+					</div>
+				</div>
+				<div class="feature three">
+					<img src="images/display.jpg">
+					<div>
+						<h1>Display</h1>
+						<p>6.5" Mini-Drop Fullscreen</p>
+					</div>
+				</div>
+				<div class="feature four">
+					<img src="images/battery.png">
+					<div>
+						<h1>Battery</h1>
+						<p>5000mAh, 720Hrs Standby</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="controls">
+			<i class="fas fa-arrow-up"  id="upBtn"></i>
+			<h3>Features</h3>
+			<i class="fas fa-arrow-down"  id="downBtn"></i>
+		</div>
+
+		<script>
+			var circle = document.getElementById("circle")
+			var upBtn = document.getElementById("upBtn")
+			var downBtn = document.getElementById("downBtn")
+
+			var rotateValue = circle.style.transform;
+			var rotateSum;
+
+			upBtn.onclick = function () {
+				rotateSum = rotateValue + "rotate(-90deg)";
+				circle.style.transform = rotateSum;
+				rotateValue = rotateSum;
+			}
+			downBtn.onclick = function () {
+				rotateSum = rotateValue + "rotate(90deg)";
+				circle.style.transform = rotateSum;
+				rotateValue = rotateSum;
+			}
+		</script>
+
+</body>
+
+</html>
